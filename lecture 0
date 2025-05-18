@@ -1,0 +1,150 @@
+print("hello, world")
+name = input("What is your name? ")
+print("Hello")
+print(name)
+#difference between comma and plus
+print("hello,",name)
+print("hello, "+name)
+
+#OR
+
+print(f"hello, {name}")
+
+#parameters and escaped charecters
+name = input("What is your name? ")
+print("Hello, ",end="\n")   #\n stands for line break
+print(name)
+#escaped charecters                                       print("hello, \"friend\"")
+
+#string methods
+name= input("What is your name? ")
+
+#remove whitespace
+name = name.strip()
+#capitilize first letter of the name
+name=name.capitalize()
+#write your name as title card
+name=name.title()
+print(f"hello,{name}")
+
+#you can link all the code to make it short
+name = name.strip().title().capitalize()
+
+#split name into first name and last name
+name = input("What is your name? ")
+first,last = name.split(" ") #if you split then give a gap inbetween (" ")
+print(f"hello, {first}")
+
+#defininf function
+def hello():
+    print("hello")
+def king():
+    print("You are king")
+
+
+
+name=input("What is your name? ")
+hello()
+king()
+
+hello(name)
+
+
+def greet(person):
+    print("hello",person )
+
+name= input("What is your name? ")
+greet(name)
+
+# Create our own function
+def hello(to="world"):
+    print("hello,", to)
+
+
+# Output using our own function
+name = input("What's your name? ")
+hello(name)
+
+# Output without passing the expected arguments
+hello()
+
+#scope is something that is defined in a function and not outside the function
+#defining a function inside a function
+def main():
+    name= input("What is your name? ")
+    hello(name)
+
+def hello(to="world"):
+    print("hello",to)
+
+main()
+
+
+
+def goatclub(to):
+    print("The goat club is", to)       #By using to, we are treating this as f(x) function like we do in maths
+
+name= input("Which one is the goat club? ")
+goatclub(name)                         #f is the function and x is the input
+                                       #fgoatclub name is the x input
+
+
+#calculator.py
+x=int(input("X= "))
+y=int(input("Y= "))         #change of string to int is called casting
+print(x+y)
+
+#float for decimal
+x=float(input("X= "))
+y=float(input("Y= "))           #Arguments are numbers
+print(x+y)
+
+#rounding up numbers to figures
+x=float(input("X= "))
+y=float(input("Y= "))
+print(round(x + y))
+
+#to put a comma in number
+x=float(input("X= "))
+y=float(input("Y= "))
+z= round(x+y)
+print(f"{z:,}")
+
+#correct to decimal places
+x=float(input("X= "))
+y=float(input("Y= "))
+z=round(x/y, 2)
+print(z)
+#OR
+x=float(input("X= "))
+y=float(input("Y= "))
+z= (x/y)
+print(f"{z:.4f}")
+
+#Return function
+def main():
+    X=int(input("Enter a number: "))
+    Y=int(input("Enter a number: "))
+    result=(X+Y)
+    print("The sum of the two numbers is: " + str(result))
+
+    result=doubled(result)
+    print("The double of the sum is: " + str(result))
+
+def doubled(result):
+    return result * 2
+
+main()
+
+
+def main():
+
+    X=int(input("Enter X: "))
+    Y=int(input("Enter Y: "))
+    print("The subtraction of X and Y is: ",(X,Y))
+    (X,Y)=doubled(X,Y)
+    print("The doubled value of X and Y is: ",(X,Y))
+
+def doubled(n):
+    return n*2
+main()
