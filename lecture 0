@@ -11,9 +11,10 @@ print("hello, "+name)
 print(f"hello, {name}")
 
 #parameters and escaped charecters
-name = input("What is your name? ")
+name = input("What is your \n\tname? ")
 print("Hello, ",end="\n")   #\n stands for line break
-print(name)
+print(name)                 #\t stands for tab
+#\n\t stands for new tab
 #escaped charecters                                       print("hello, \"friend\"")
 
 #string methods
